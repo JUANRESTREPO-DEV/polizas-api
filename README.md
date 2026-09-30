@@ -12,7 +12,7 @@ API REST para la gestión de pólizas de arrendamiento **individuales** y **cole
 - OpenAPI / Swagger UI · Actuator
 - JUnit 5 · AssertJ · MockMvc
 
-El documento con el diseño de sistema, la optimización SQL y la estrategia de Git está en [docs/Juan_Pablo_Restrepo_B_Prueba_Tecnica.pdf](docs/Juan_Pablo_Restrepo_B_Prueba_Tecnica.pdf).
+El documento con el diseño de sistema, la optimización SQL y la estrategia de Git está en [docs/JUAN_PABLO_RESTREPO_Prueba_Tecnica.pdf](docs/JUAN_PABLO_RESTREPO_Prueba_Tecnica.pdf).
 
 ## Contenido
 
