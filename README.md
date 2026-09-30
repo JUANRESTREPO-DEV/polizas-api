@@ -1,5 +1,9 @@
 # polizas-api
 
+[![CI](https://github.com/JUANRESTREPO-DEV/polizas-api/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/JUANRESTREPO-DEV/polizas-api/actions/workflows/ci.yml)
+![Java](https://img.shields.io/badge/Java-17-007396?logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5-6DB33F?logo=springboot&logoColor=white)
+
 API REST para la gestión de pólizas de arrendamiento **individuales** y **colectivas**: consulta, renovación por IPC, cancelación en cascada y administración de riesgos. Cada cambio de estado se notifica al servicio de edición del CORE, que en este proyecto está simulado con un endpoint mock.
 
 - Java 17 · Spring Boot 3.5 · Spring Data JPA · Bean Validation
