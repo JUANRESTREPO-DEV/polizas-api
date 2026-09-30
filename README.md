@@ -1,6 +1,7 @@
 # polizas-api
 
 [![CI](https://github.com/JUANRESTREPO-DEV/polizas-api/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/JUANRESTREPO-DEV/polizas-api/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/JUANRESTREPO-DEV/polizas-api/branch/main/graph/badge.svg)](https://codecov.io/gh/JUANRESTREPO-DEV/polizas-api)
 ![Java](https://img.shields.io/badge/Java-17-007396?logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5-6DB33F?logo=springboot&logoColor=white)
 
@@ -284,6 +285,8 @@ Todas las respuestas de error siguen RFC 7807 (`application/problem+json`) y agr
 | `CoreEdicionIntegrationTest` | Extremo a extremo sobre puerto aleatorio | La cancelación dispara una llamada HTTP real al mock y queda registrada en el log |
 
 Cada prueba de integración recarga los datos iniciales, así que son independientes entre sí y del orden de ejecución.
+
+La cobertura se mide con JaCoCo. `./mvnw verify` genera el reporte en `target/site/jacoco/index.html`; el pipeline de CI lo publica en Codecov.
 
 ## Configuración
 
