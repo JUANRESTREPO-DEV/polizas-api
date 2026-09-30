@@ -1,0 +1,77 @@
+spring:
+  application:
+    name: polizas-api
+  datasource:
+    url: jdbc:h2:mem:polizas;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  sql:
+    init:
+      mode: embedded
+      encoding: UTF-8
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+  mvc:
+    problemdetails:
+      enabled: true
+
+server:
+  port: ${PORT:8080}
+  error:
+    include-stacktrace: never
+
+polizas:
+  renovacion:
+    ipc-porcentaje: ${IPC_PORCENTAJE:5.20}
+
+seguridad:
+  api-key:
+    valor: ${API_KEY:123456}
+    rutas-publicas:
+      - /swagger-ui.html
+      - /swagger-ui/**
+      - /v3/api-docs/**
+      - /h2-console/**
+      - /actuator/health/**
+
+core:
+  edicion:
+    base-url: ${CORE_EDICION_URL:}
+    path: /core-mock/evento
+    api-key: ${API_KEY:123456}
+    connect-timeout: 2s
+    read-timeout: 5s
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},%X{correlationId:-}]"
+  level:
+    com.segurosbolivar.polizas: INFO
